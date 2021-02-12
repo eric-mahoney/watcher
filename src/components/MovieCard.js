@@ -6,7 +6,7 @@ const convertAverage = (num) => {
 
 const MovieCard = ({ id, image, average, title, description }) => {
   return (
-    <Movie id={id} href={`http://localhost:3000/movie/${id}`}>
+    <Movie id={id} href={`/movie/${id}`}>
       <ImageWrapper>
         <Image src={image} />
         <Average>{convertAverage(average)}</Average>
@@ -20,6 +20,7 @@ const MovieCard = ({ id, image, average, title, description }) => {
 };
 
 const Movie = styled.a`
+  text-decoration: none;
   overflow: hidden;
   background-color: white;
   border-radius: 10px;
@@ -39,10 +40,12 @@ const ImageWrapper = styled.div`
 `;
 
 const Information = styled.div`
+  color: grey;
   padding: 20px;
 `;
 
 const Title = styled.h2`
+  color: black;
   font-size: 20px;
   margin: 20px 0px;
 `;
