@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const Navbar = () => {
   return (
-    <StyledNavbar class="navbar">
-      <ul class="left-navbar">
+    <StyledNavbar className="navbar">
+      <ul className="left-navbar">
         <li>WATCHER</li>
       </ul>
-      <ul class="right-navbar">
+      <ul className="right-navbar">
         <li>Categories</li>
         <li>Charts</li>
       </ul>

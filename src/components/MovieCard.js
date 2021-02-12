@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-const MovieCard = ({ image, average, title, description }) => {
+const convertAverage = (num) => {
+  return Math.floor(num * 10);
+};
+
+const MovieCard = ({ id, image, average, title, description }) => {
   return (
-    <Movie>
+    <Movie id={id} href={`http://localhost:3000/movie/${id}`}>
       <ImageWrapper>
         <Image src={image} />
-        <Average>{average}</Average>
+        <Average>{convertAverage(average)}</Average>
       </ImageWrapper>
       <Information>
         <Title>{title}</Title>
@@ -15,7 +19,7 @@ const MovieCard = ({ image, average, title, description }) => {
   );
 };
 
-const Movie = styled.div`
+const Movie = styled.a`
   overflow: hidden;
   background-color: white;
   border-radius: 10px;
